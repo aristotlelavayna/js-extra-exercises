@@ -55,6 +55,6 @@ form.addEventListener("submit", (event) => {
         return false;
     }
 
-    document.getElementById("outputMessage").innerHTML = "Successfully Registered.";
+    document.getElementById("outputMessage").innerHTML = `${firstName} ${lastName} has sucessfully registered.`
 });
 
