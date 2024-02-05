@@ -54,5 +54,7 @@ form.addEventListener("submit", (event) => {
         alert("the password and confirm password should match.")
         return false;
     }
+
+    document.getElementById("outputMessage").innerHTML = "Successfully Registered.";
 });
 
