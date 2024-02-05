@@ -21,17 +21,38 @@ form.addEventListener("submit", (event) => {
     event.preventDefault();
 
     let firstName = document.getElementById("firstName").value;
-    let lastName = document.getElementById("lastName").value;
-    let userName = document.getElementById("userName").value;
-    let password = document.getElementById("password").value;
-    let confirmPassword = document.getElementById("confirmPassword").value;
-
-    let userInput = inputtxt.value;
-    if (userInput.value == null || userInput.value == "" || userInput.value.length < 8) {
-        alert("Field is 8 characters minimum!");
-    } else {
-        alert("ok");
+    if(firstName==null || firstName=="") {
+        alert("first name input box should not be empty.");
+        return false;
     }
 
+    let lastName = document.getElementById("lastName").value;
+    if(lastName==null || lastName=="") {
+        alert("last name input box should not be empty.");
+        return false;
+    }
+
+    let userName = document.getElementById("userName").value;
+    if(userName==null || userName=="" || userName.length < 8) {
+        alert("user name should be atleast 8 characters")
+        return false;
+    }
+
+    let password = document.getElementById("password").value; 
+    if(password==null || password=="" || password.length < 8) {
+        alert("The password should be atleast 8 characters.")
+        return false;
+    }
+
+    let confirmPassword = document.getElementById("confirmPassword").value;
+    if(confirmPassword==null || confirmPassword=="" || confirmPassword.length < 8) {
+        alert("The confirm password should be atleast 8 characters.")
+        return false;
+    }
+
+    if(password !== confirmPassword) {
+        alert("the password and confirm password should match.")
+        return false;
+    }
 });
 
